@@ -1,4 +1,4 @@
-# Exp02-RollABall
+<img width="1918" height="1198" alt="image" src="https://github.com/user-attachments/assets/a14bcad0-4778-4dee-922a-15957956318d" /># Exp02-RollABall
 
 ## Aim:
 ### To develop a 3D application to roll a ball in unity
@@ -25,8 +25,53 @@
 ### Step8: Create a new script -> Create a folder in project (Name: Scripts) Hierarchy -> Player -> Inspector-> AddComponent-> NewScripts-> PlayerController( Click create and Add), Copy the PlayerController and drag to Script folder, Double click the PlayerController file and type the coding
 
 ## Program:
+```
+using UnityEngine;
 
+public class Sphere : MonoBehaviour
+{
+    public float xForce = 5.0f;
+    public float yForce = 100.0f;
+    public float zForce = 5.0f; 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float x = 0.0f, y = 0.0f, z = 0.0f;
+        if (Input.GetKey(KeyCode.A))
+        {
+            x = x - xForce;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x += xForce;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            z = z - zForce;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            z += zForce;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            y = yForce;
+        }
+        GetComponent<Rigidbody>().AddForce(x, y, z);
+    }
+}
+```
 
 ## Output:
+<img width="1918" height="1198" alt="image" src="https://github.com/user-attachments/assets/e1b43c1f-2050-4b43-8383-fe5448d152ec" />
+
+
 
 ## Result:
+A 3D application to roll a ball in unity is developed successfully.
