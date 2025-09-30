@@ -1,4 +1,4 @@
-<img width="1918" height="1198" alt="image" src="https://github.com/user-attachments/assets/a14bcad0-4778-4dee-922a-15957956318d" /># Exp02-RollABall
+
 
 ## Aim:
 ### To develop a 3D application to roll a ball in unity
